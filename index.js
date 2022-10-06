@@ -22,7 +22,7 @@ app.use(cors({
 
 
 // connection establishment
-mongoose.connect('mongodb+srv://sarath:1aftHn2R8Wz2Q8xY@cluster0.qo2hqto.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true},(error) => {
+mongoose.connect('mongodb+srv://expense:hJx6vbDDwQ8dRp8F@cluster0.zgzc7id.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true},(error) => {
     if (error) {
         console.log(error);
     }
@@ -41,4 +41,4 @@ app.listen(process.env.PORT,() => {
     console.log("server started at 4000");
 })
 
-
+// 1aftHn2R8Wz2Q8xY
