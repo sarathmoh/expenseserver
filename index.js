@@ -27,7 +27,7 @@ mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser:true,useUnifiedTopology
         console.log(error);
     }
     else {
-        console.log("succesfully connected to database");
+        console.log("succesfully connected to your database");
     }
 })
 
