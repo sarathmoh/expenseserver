@@ -14,12 +14,15 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 // app.use(cors({origin:"*",credentials:true}))
-app.use(cors());
+app.use(cors({
+    origin:"https://tangerine-kataifi-6eae84.netlify.app",
+    methods:['GET','POST','PATCH','DELETE']
+}));
 
 
 
 // connection establishment
-mongoose.connect('mongodb://localhost:27017/expenseDB',{useNewUrlParser:true,useUnifiedTopology:true},(error) => {
+mongoose.connect('mongodb+srv://sarath:1aftHn2R8Wz2Q8xY@cluster0.qo2hqto.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true},(error) => {
     if (error) {
         console.log(error);
     }
@@ -34,7 +37,7 @@ app.use('/auth',authRoute)
 app.use('/api',apiRoute)
 
 //port
-app.listen(4000,() => {
+app.listen(process.env.PORT,() => {
     console.log("server started at 4000");
 })
 
