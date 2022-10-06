@@ -18,7 +18,7 @@ const id = req.user.id;
     } else {
       if (foundUser) {
         foundUser.expenses.push({
-          id:req.body.id,
+          expenseid:req.body.id,
           item: req.body.item,
           expense: parseInt(req.body.expense),
           date: req.body.date,
