@@ -22,7 +22,7 @@ app.use(cors({
 
 
 // connection establishment
-mongoose.connect('mongodb+srv://expense:hJx6vbDDwQ8dRp8F@cluster0.zgzc7id.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true},(error) => {
+mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser:true,useUnifiedTopology:true},(error) => {
     if (error) {
         console.log(error);
     }
