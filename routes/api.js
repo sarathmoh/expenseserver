@@ -33,8 +33,7 @@ const id = req.user.id;
 
 //route for viewing products
 router.get("/viewexpense", verify, (req, res) => {
-  console.log(req.user.id)
-  console.log("hello");
+  
   const id = req.user.id;
 
   User.findById(id, (error, foundUser) => {
