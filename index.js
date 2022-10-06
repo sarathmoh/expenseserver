@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 // app.use(cors({origin:"*",credentials:true}))
 app.use(cors({
-    origin:"https://tangerine-kataifi-6eae84.netlify.app",
+    origin:"https://thistrackyourexpenses.netlify.app",
     methods:['GET','POST','PATCH','DELETE']
 }));
 
